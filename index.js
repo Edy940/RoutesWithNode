@@ -8,17 +8,17 @@ const server = http.createServer((req, res) => {
     case '':
 
       res.writeHead(200, { 'Content-Type': 'text/plain' })
-      res.end('Homepage')
+      res.send('Homepage')
 
       break
     case '/about':
       res.writeHead(200, { 'Content-Type': 'text/plain' })
-      res.end('About')
+      res.send('About')
       break
 
     default:
       res.writeHead(404, { 'Content-Type': 'text/plain' })
-      res.end('Not Found')
+      res.send('Not Found')
       break;
   }
 })
